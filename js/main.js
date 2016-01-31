@@ -33,7 +33,7 @@ var social = {
     linkedin: {
         platform: "LinkedIn",
         color: "0A76C8",
-        link: "http://www.linkedin.com/in/amejia",
+        link: "http://www.linkedin.com/in/antmejia",
         icon: svg[1]
     },
 
