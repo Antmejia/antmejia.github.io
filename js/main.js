@@ -85,7 +85,7 @@ $(function() {
     });
     $(".main-section").css("min-height", windHeight + $(".navbar-default").height());
     // Add main images
-    $(".patio").attr("src", pT + img[0]);
+    $(".patio").attr("src", "https://cloud.githubusercontent.com/assets/12551824/12705165/eb4dfaa6-c839-11e5-8978-caedd81e5cef.jpg");
     $(".arrowhome").attr("src", pT + img[1]);
 
     // Add logo to navbar
