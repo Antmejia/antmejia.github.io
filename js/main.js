@@ -783,16 +783,7 @@ $(function() {
             height: "100%"
         }, {
             delay: 1100,
-            duration: 1200,
-            complete: function() {
-                var person = prompt("Please enter your full name", "Enter Here");
-                if (person != "Taylor Newcomb") {
-                   person = prompt("Please try again", "Enter Here");
-                }
-                else {
-                    alert("Hi Taylor!\n I love you! ");
-                }
-            }
+            duration: 1200          
         });
 
         $(".navbar").velocity(
