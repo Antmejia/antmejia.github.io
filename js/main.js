@@ -26,21 +26,21 @@ var social = {
     gplus: {
         platform: "Google-Plus",
         color: "FF4D36",
-        link: "http://www.google.com",
+        link: "https://plus.google.com/11099305054815726998",
         icon: svg[0]
     },
 
     linkedin: {
         platform: "LinkedIn",
         color: "0A76C8",
-        link: "http://www.linkedin.com",
+        link: "http://www.linkedin.com/in/amejia",
         icon: svg[1]
     },
 
     twitter: {
         platform: "Twitter",
         color: "00A0FF",
-        link: "http://www.twitter.com",
+        link: "http://www.twitter.com/_antmejia",
         icon: svg[2]
     },
 
