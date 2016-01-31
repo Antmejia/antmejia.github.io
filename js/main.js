@@ -188,7 +188,7 @@ $(function() {
         .append('<div id="aboutface"></div>')
         .append('<div id="aboutsum"></div>');
 
-    $("#aboutface").append('<img class="proPic" alt="Profile Picture" src="' + pT + img[2] + '">')
+    $("#aboutface").append('<img class="proPic" alt="Profile Picture" src="' + 'https://cloud.githubusercontent.com/assets/12551824/12705351/56729c02-c83e-11e5-8443-719d7183ce36.jpg' + '">')
         .append('<h3> Anthony Mejia</h3><h4> New York, NY</h4><hr>');
 
     for (var key in social) {
