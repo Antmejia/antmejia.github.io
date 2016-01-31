@@ -86,7 +86,7 @@ $(function() {
     $(".main-section").css("min-height", windHeight + $(".navbar-default").height());
     // Add main images
     $(".patio").attr("src", "https://cloud.githubusercontent.com/assets/12551824/12705165/eb4dfaa6-c839-11e5-8978-caedd81e5cef.jpg");
-    $(".arrowhome").attr("src", pT + img[1]);
+    $(".arrowhome").attr("src","https://cloud.githubusercontent.com/assets/12551824/12705366/d353e8d4-c83e-11e5-8de0-0a359797d1f1.png");
 
     // Add logo to navbar
     $(".navbar-brand").append('<div class="navicon">' + svg[8] + '</div');
