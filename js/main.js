@@ -802,3 +802,10 @@ $(function() {
         //  $(".inner-footer").append('<h3> So what did it take to make this site?</h3>');
     });
 });
+
+$(document).ready( function() {
+    $('a[href="index"]').click(function(e) {
+        e.preventDefault();
+        alert("clicked");
+    });
+});
