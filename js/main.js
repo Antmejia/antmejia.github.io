@@ -726,10 +726,12 @@ $(function() {
     // Contact Section
 
     var contact = [{
+        type: "email"
         icon: svg[9],
         text: "anthony.mejia1194@gmail.com",
         link: "mailto:anthony.mejia1194@gmail.com"
     }, {
+        type: "telephone"
         icon: svg[10],
         text: "(347) 474-9838",
         link: "tel:3474749838"
@@ -804,9 +806,22 @@ $(function() {
     });
 });
 
+
+// Analytical Stuff
 $(document).ready( function() {
-    $('a[href="index"]').click(function(e) {
-        e.preventDefault();
-        alert("clicked");
-    });
+	
+	$("[class$='-button']").click(function() {
+		var buttonText = $(this).text();
+		ga('send', 'event', 'button', 'click', buttonText);
+	});
+	
+	$("#bigJoe a").click(function() {
+		ga('send', 'event', 'element', 'click', "Arrow Down");
+	});
+	
+	$(".detail").click(function() {
+		var typeDetail = $(this).attr("id");
+		ga('send', 'event', 'element', 'click', typeDetail);
+	});
+	
 });
