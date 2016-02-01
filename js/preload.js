@@ -141,6 +141,7 @@ $(document).ready(function() {
                 $("body").css("overflow", "visible");
                 $("#preload").remove();
                 preFinish = true;
+                ga('send', 'event', 'load', 'time', "Preloading animation complete");
             }
         });
 });
