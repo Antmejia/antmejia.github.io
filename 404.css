@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+}
+
+body {
+	position: absolute;
+    min-height: 100%;
+    overflow: auto;
+}
+
+img {
+	top: 0;
+	width: 100%;
+}
+
+.wrapper {
+	position: relative;
+	width: 70%;
+	margin: 0 auto;   
+    padding-bottom: 100px;
+    max-width: 490px;
+}
+	
+h1 {
+	color: #2C3C5F;
+}
+
+h3 {
+	color: #47577A;
+	font-family: "Oxygen", sans-serif;
+}
+
+ p {
+	color: #62708B;
+	font-family: "Oxygen", sans-serif;
+}
+
+
+
+.home-button {
+	padding: 10px 0;
+	background-color: #FF6A5C;
+	border: 2px solid #E15244;
+	border-radius: 5px;
+	width: 160px;
+	margin: 0 auto;
+	box-shadow: 0 2px 0 -1px #E15244, 0 3px 0 -2px #E15244, 0 5px 0 -3px #E15244;
+    -moz-box-shadow: 0 2px 0 -1px #E15244, 0 3px 0 -2px #E15244, 0 5px 0 -3px #E15244;
+    -webkit-box-shadow: 0 2px 0 -1px #E15244, 0 3px 0 -2px #E15244, 0 5px 0 -3px #E15244;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -kthtml-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+}
+
+.home-button:hover {
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -kthtml-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	background-color: #283B4D;
+	width: 100%;
+	padding: 2px 0;
+}
+
+#footer p {
+	color: #E5E5E5
+}
