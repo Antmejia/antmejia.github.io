@@ -19,7 +19,7 @@ var preTime = 5200 + Math.floor(Math.random() * 700);
 var $sections = $('.main-section');
 var $project, $prodes, tBar, leftPos, barWidth, $nav = $(".navbar");
 
-var myBio = "Born and raised in the Empire City, Anthony Mejia is currently pursuing a career as a Front-End Web Developer. He's always had a passion for turning ideas into something that is functional, yet engaging; creating interactive and appealing web experiences. As he improves his coding and design skills, his showcase will continue to grow while he learns from every project he takes on. Self taught and self motivated, he only has one opponent: Internet Explorer.</p> <p class=\"mybio\">In his spare time, you can find him shooting hoops, watching football, building awesome planes, and spending quality time with his family.";
+var myBio = "Born and raised in the Empire City, Anthony Mejia is currently pursuing a career as a Front-End Web Developer. He's always had a passion for turning ideas into something that is functional, yet engaging; creating interactive and appealing web experiences. As he improves his coding and design skills, his showcase will continue to grow while he learns from every project he takes on. Self taught and self motivated, he only has one opponent: Internet Explorer.</p> <p class=\"mybio\">In his spare time, you can find him shooting hoops, watching football, playing video games, and spending quality time with his family.";
 var rank = ["Expert", "Advanced", "Average", "Beginner"];
 
 var social = {
