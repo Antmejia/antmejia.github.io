@@ -556,6 +556,7 @@ $(function() {
                 "transition.slideUpOut", {
                     delay: 600
                 });
+            ga('send', 'event', 'button', 'click', $button.text());
             if ($button.text() === "View Report Card") {
 
                 var url = social.treehouse.link + ".json";
