@@ -409,30 +409,6 @@ var showcase = {
         link: "index.html",
         thumb: pT + img[3]
     },
-
-    biggide: {
-        name: "twitter",
-        title: "This is the title section",
-        description: "this is only a test this is only a test this is only a test this is only a test this is only a test this is only a test this is only a test this is only a test this is only a test this is only a test this is only a test this is only a test",
-        link: "index.html",
-        thumb: pT + img[3]
-    },
-
-    biggsie: {
-        name: "twitter",
-        title: "This is the title section",
-        description: "this is only a test this is only a test this is only a test",
-        link: "index.html",
-        thumb: pT + img[3]
-    },
-
-    testing: {
-        name: "twitter",
-        title: "This is the title section",
-        description: "this is only a test this is only a test this is only a test",
-        link: "index.html",
-        thumb: pT + img[3]
-    }
 };
 
 $(function() {
