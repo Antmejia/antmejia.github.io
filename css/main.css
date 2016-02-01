@@ -772,8 +772,8 @@ h2.sectiontitle {
     border: 2px solid;
     margin: 7.5px 2.5%;
     padding: 0 5px;
-    width: 40%;
-    max-width: 150px;
+    width: 60%;
+    max-width: 250px;
 }
 
 @media( min-width: 768px) { 
