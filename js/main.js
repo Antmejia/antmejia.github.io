@@ -403,11 +403,11 @@ $(function() {
 
 var showcase = {
     biggie: {
-        name: "twitter",
-        title: "This is the title section",
-        description: "W W W W W W W W W W W W W W W W W W W W W W W W W W W W W W W W W",
-        link: "index.html",
-        thumb: pT + img[3]
+        name: "Shine App",
+        title: "Shine Weather App (Under Construction)",
+        description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
+        link: "",
+        thumb: "https://cloud.githubusercontent.com/assets/12551824/12731757/7295af7e-c900-11e5-9204-ab3f4899b0cf.jpg"
     },
 };
 
