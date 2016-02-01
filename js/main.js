@@ -774,6 +774,7 @@ $(function() {
         $(".stats-button").velocity({
             height: "0",
             opacity: "0",
+            borderColorAlpha: 0
         }, {
             duration: 900,
             easing: "swing"
