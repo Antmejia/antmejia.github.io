@@ -595,6 +595,7 @@ $(function() {
 
                     $(".myResume *").velocity(
                         "transition.slideUpOut", {
+                            delay: 800,
                             stagger: 150,
                             backwards: false,
                             complete: function() {
