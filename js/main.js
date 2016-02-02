@@ -535,7 +535,7 @@ $(function() {
             ga('send', 'event', 'button', 'click', $button.text());
             if ($button.text() === "View Report Card") {
 
-                var url = social.treehouse.link + ".json";
+                var url = "amejia.json";
 
                 $.getJSON(url, function(treehouse) {
 
