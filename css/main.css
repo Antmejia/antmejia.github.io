@@ -147,9 +147,15 @@ p,
     fill: #2188FF;
 }
 
-.reportcard-button ,
+.reportcard-button,
+.resume-button,
 #info a:hover {
 	color: #2188FF;
+}
+
+.reportcard-button:hover,
+.resume-button:hover {
+	color: #3268A4;
 }
 
 .skills p,
@@ -774,6 +780,13 @@ h2.sectiontitle {
     padding: 0 5px;
     width: 60%;
     max-width: 250px;
+}
+
+.resume-button {
+	margin: 20px auto;
+	line-height: 40px;
+	height: 40px;
+    width: 125px;
 }
 
 @media( min-width: 768px) { 
