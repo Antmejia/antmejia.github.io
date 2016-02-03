@@ -407,7 +407,7 @@ var showcase = {
         title: "Shine Weather App (Under Construction)",
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
         link: "",
-        thumb: "https://cloud.githubusercontent.com/assets/12551824/12731757/7295af7e-c900-11e5-9204-ab3f4899b0cf.jpg"
+        thumb: "https://cloud.githubusercontent.com/assets/12551824/12793312/ff4b1bc4-ca7d-11e5-8e81-4e5c0f8021b2.jpg"
     },
 };
 
