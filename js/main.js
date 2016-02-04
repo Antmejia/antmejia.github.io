@@ -803,7 +803,7 @@ $(document).ready( function() {
 		ga('send', 'event', 'contact', 'click', typeDetail);
 	});
 	
-    S(".topbar").click(function() {
+    $(".topbar").click(function() {
         var topText = $(this).text();
         ga('send', 'event', 'Navbar', 'click', topText);
     });
