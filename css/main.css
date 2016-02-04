@@ -438,7 +438,7 @@ li.topbar {
 
 #navline {
     background: #ff4858;
-    display: inline;
+    display: none;
     position: absolute;
     bottom: 2px;
     left: 0;
@@ -459,8 +459,12 @@ svg.social-icon {
     fill: #6A809B;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     #navline {
+        display: inline;
+    }
+
+    .navvbar-toggle {
         display: none;
     }
 
