@@ -113,7 +113,7 @@ $(window).resize(function() {
     }
 
     if (windWidth > 768) {
-        $("#navline").css("left", $(".curTab").position().left + "px");
+        $("#navline").css("left", ($(".curTab").position().left) + "px");
     }
 
     if (parseInt($("#bigJoe p").css("font-size"), 10) >= 60) {
