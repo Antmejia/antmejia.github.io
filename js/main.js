@@ -3,7 +3,7 @@
 // Load variables
 
 var pT = "img/";
-var img = ["nycity-blur.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg"];
+var img = ["nycity-blur.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "shineapp.jpg"];
 var windHeight = $(window).height();
 var windWidth = $(window).width();
 var scrollOnceArrow = false;
@@ -85,8 +85,8 @@ $(function() {
     });
     $(".main-section").css("min-height", windHeight + $(".navbar-default").height());
     // Add main images
-    $(".patio").attr("src", "https://cloud.githubusercontent.com/assets/12551824/12705165/eb4dfaa6-c839-11e5-8978-caedd81e5cef.jpg");
-    $(".arrowhome").attr("src","https://cloud.githubusercontent.com/assets/12551824/12705366/d353e8d4-c83e-11e5-8de0-0a359797d1f1.png");
+    $(".patio").attr("src", pT + img[0]);
+    $(".arrowhome").attr("src", pT + img[1]);
 
     // Add logo to navbar
     $(".navbar-brand").append('<div class="navicon">' + svg[8] + '</div');
@@ -188,10 +188,10 @@ $(function() {
         .append('<div id="aboutface"></div>')
         .append('<div id="aboutsum"></div>');
 
-    $("#aboutface").append('<img class="proPic" alt="Profile Picture" src="' + 'https://cloud.githubusercontent.com/assets/12551824/12705351/56729c02-c83e-11e5-8443-719d7183ce36.jpg' + '">')
+    $("#aboutface").append('<img class="proPic" alt="Profile Picture" src="' + (pT + img[2]) + '">')
         .append('<h3> Anthony Mejia</h3><h4> New York, NY</h4><hr>');
 
-    for (var key in social) {
+    for (var key in social) { 
         var media = social[key];
         $("#aboutface").append('<a href="' + media.link + '">' + media.icon + '</a>');
         $("svg:not(.social-icon)").attr("alt", media.platform + " icon")
@@ -407,7 +407,7 @@ var showcase = {
         title: "Shine Weather App (Under Construction)",
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
         link: "",
-        thumb: "https://cloud.githubusercontent.com/assets/12551824/12793312/ff4b1bc4-ca7d-11e5-8e81-4e5c0f8021b2.jpg"
+        thumb: pT + img[4]
     },
 };
 
