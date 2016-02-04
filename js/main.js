@@ -795,12 +795,16 @@ $(document).ready( function() {
 	});
 	
 	$("#bigJoe a").click(function() {
-		ga('send', 'event', 'element', 'click', "Arrow Down");
+		ga('send', 'event', 'bigJoe', 'click', "Arrow Down");
 	});
 	
 	$(".detail").click(function() {
 		var typeDetail = $(this).attr("id");
-		ga('send', 'event', 'element', 'click', typeDetail);
+		ga('send', 'event', 'contact', 'click', typeDetail);
 	});
 	
+    S(".topbar").click(function() {
+        var topText = $(this).text();
+        ga('send', 'event', 'Navbar', 'click', topText);
+    });
 });

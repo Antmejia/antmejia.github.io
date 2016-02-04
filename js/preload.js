@@ -140,8 +140,8 @@ $(document).ready(function() {
             complete: function() {
                 $("body").css("overflow", "visible");
                 $("#preload").remove();
-                preFinish = true;
-                
+                preFinish = true; 
+                ga("send", 'event', 'Time', 'loading', "Plreloading complete");              
             }
         });
 });
