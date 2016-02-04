@@ -79,7 +79,7 @@ $(document).ready(function() {
         easing: "easeInQuart"
     });
 
-    if (windWidth < 768) {
+    if (windWidth < 800) {
 
         $(".buns").velocity(
             "transition.slideRightIn", {

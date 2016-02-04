@@ -246,9 +246,9 @@ li.topbar {
     display: none;
 }
 
-/**********  NAVBAR (min - 768px)  **********/
+/**********  NAVBAR (min - 800px)  **********/
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     li.topbar {
         font-weight: bold;
         float: left;
@@ -459,7 +459,7 @@ svg.social-icon {
     fill: #6A809B;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     #navline {
         display: inline;
     }
@@ -601,7 +601,7 @@ h2.sectiontitle {
     text-align: left;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     #skills {
         overflow: auto;
     }
@@ -697,7 +697,7 @@ h2.sectiontitle {
     height: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     .thumb {
         width: 100%;
         height: auto;
@@ -793,7 +793,7 @@ h2.sectiontitle {
     width: 125px;
 }
 
-@media( min-width: 768px) { 
+@media( min-width: 800px) { 
 	.highlights li {
 		width: 75%;
 	} 
@@ -845,7 +845,7 @@ h3.total {
     padding-bottom: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     #skillsResume {
         max-width: 500px;
         left: -50%;

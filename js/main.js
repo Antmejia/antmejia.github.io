@@ -108,11 +108,11 @@ $(window).resize(function() {
     windHeight = $(window).height();
     $("#bigJoe").height(windHeight + 10);
     $(".main-section").css("min-height", windHeight + $(".navbar-default").height());
-    if (windWidth < 768 && preFinish === true) {
+    if (windWidth < 800 && preFinish === true) {
         $(".buns").show();
     }
 
-    if (windWidth > 768) {
+    if (windWidth > 800) {
         $("#navline").css("left", ($(".curTab").position().left) + "px");
         $(".buns").hide();
     }
@@ -146,7 +146,7 @@ $(function() {
             $(".navbar").addClass("opaque").removeClass("trans");
         } else {
             $(".navbar").addClass("trans").removeClass("opaque");
-            if (windWidth > 768) {
+            if (windWidth > 800) {
                 navWidth = (($(window).scrollTop() / ($(".main-section").first().offset().top / 140)));
                 $("#navline").css("width", navWidth);
             }
@@ -161,7 +161,7 @@ $(function() {
                     tBar = navLink;
                     leftPos = tBar.parent().position().left;
                     barWidth = tBar.parent().width();
-                    if (windWidth > 768) {
+                    if (windWidth > 800) {
                         $("#navline").velocity("stop", true).velocity({
                             left: leftPos,
                             width: barWidth
@@ -222,7 +222,7 @@ $(function() {
     $("#skillsChart").append('<canvas id="skillsDonut" class="chart" width="auto" height="auto"></canvas>')
         .append('<h3> Technical Skills</h3>')
         .append('<canvas id="skillsBar" class="chart" width="auto" height="310px"></canvas>');
-    if (windWidth < 768) {
+    if (windWidth < 800) {
         canvasWidth = windWidth - (windWidth * 0.1);
     } else {
         canvasWidth = windWidth - (windWidth * 0.7);
