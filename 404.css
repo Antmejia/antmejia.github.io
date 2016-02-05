@@ -101,6 +101,6 @@ a {
 	}
 	
 	.wrapper {
-	    max-width: 580px;
+	    width: 580px;
 	}
 }
