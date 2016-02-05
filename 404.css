@@ -99,4 +99,8 @@ a {
 	p {
 	    font-size: 20px;
 	}
+	
+	.wrapper {
+	    max-width: 580px;
+	}
 }
