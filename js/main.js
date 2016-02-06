@@ -370,7 +370,7 @@ $(window).scroll(function() {
 var breakdown = {
     web: {
         title: "From clean designs to pixel-perfect websites",
-        summary: "this is the summary section",
+        summary: "With great design come great responsibility.</p><p>Creating a beautiful mockup of your website is definitely helpful for mapping out your thoughts (definitely encouraged when working with a team), but means nothing if it can't be translated to a responsive, functional website. After all, your users are visiting your site for its <span class=\"itc\">content</span>, not its well-chosen colors. A clean, well-thought design is only one of many steps in successfully creating a beautifully unique experience for all users.",
         logo: svg[4]
     },
 
