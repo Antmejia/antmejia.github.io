@@ -68,7 +68,8 @@ $(document).ready(function() {
     }, {
         delay: preTime + 5500, //6500,
         duration: 600,
-        easing: "swing"
+        easing: "swing",
+        complete: function() {$("#preload").remove();}
     });
 
     $(".prelogo").velocity({
@@ -138,8 +139,7 @@ $(document).ready(function() {
             delay: preTime + 10000, //11000
             duration: 1900,
             complete: function() {
-                $("body").css("overflow", "visible");
-                $("#preload").remove();
+                $("body").css("overflow", "visible");              
                 preFinish = true; 
                 ga("send", 'event', 'Time', 'loading', "Plreloading complete");              
             }
