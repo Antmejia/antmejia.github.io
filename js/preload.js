@@ -141,7 +141,7 @@ $(document).ready(function() {
             complete: function() {
                 $("body").css("overflow", "visible");              
                 preFinish = true; 
-                ga("send", 'event', 'Time', 'loading', "Plreloading complete");              
+                ga("send", 'event', 'time', 'loading', "Preloading complete");              
             }
         });
 });
