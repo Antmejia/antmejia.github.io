@@ -805,6 +805,6 @@ $(document).ready( function() {
 	
     $(".topbar").click(function() {
         var topText = $(this).text();
-        ga('send', 'event', 'Navbar', 'click', topText);
+        ga('send', 'event', 'navbar', 'click', topText);
     });
 });
