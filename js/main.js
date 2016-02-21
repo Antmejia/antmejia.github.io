@@ -7,8 +7,7 @@ var img = ["nycity-blur.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "sh
 var windHeight = $(window).height();
 var windWidth = $(window).width();
 var scrollOnceArrow = false;
-var scrollOncePie = false;
-var scrollOnceBar = false;
+var scrollOnceChart = false;
 var scrollOnceInfo = false
 var preFinish = false;
 var inProgress = false;
@@ -273,18 +272,19 @@ var barData = {
 // This function will determine if the canvas is on screen and if so, draw the chart and animate it. The scrollOnce function makes sure this fires only once
 $(window).scroll(function() {
 
-    if ($("#skillsDonut").isOnScreenFull() === true && scrollOncePie === false && preFinish === true) {
+    if ($("#skillsChart h3").isOnScreenFull() === true && scrollOnceChart === false && preFinish === true) {
         // alert("Canvas is inside viewpoint");
+        scrollOnceChart = true;
 
-        scrollOncePie = true;
+        var dlay = 2000
         var skillsDonut = new Chart($("#skillsDonut").get(0).getContext("2d"), {
             type: 'doughnut',
             data: donutData,
             options: {
                 cutoutPercentage: 70,
-                responsiveAnimationDuration: 1900,
+                responsiveAnimationDuration: dlay,
                 animation: {
-                    duration: 1900,
+                    duration: dlay,
                     easing: "easeInOutQuint",
                 },
                 tooltips: {
@@ -302,68 +302,65 @@ $(window).scroll(function() {
                 }
             }
         });
-    }
 
-    if ($("#skillsBar").isOnScreen() === true && scrollOnceBar === false && preFinish === true) {
-
-        scrollOnceBar = true;
-        var ctxBar = $("#skillsBar").get(0).getContext("2d");
-        var skillsBar = new Chart(ctxBar, {
-            type: 'bar',
-            data: barData,
-            options: {
-                responsiveAnimationDuration: 2400,
-                animation: {
-                    duration: 2400,
-                    easing: "easeOutQuart",
-                },
-                tooltips: {
-                    callbacks: {
-                        beforeTitle: function(tooltipItem, data) {
-                            return data.labels[tooltipItem.index];
-                        },
-                        label: function(tooltipItem, data) {
-                            var rankIndex = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-                            var ranking = "none";
-                            if (rankIndex <= 3) {
-                                ranking = rank[3];
-                            } else if (rankIndex <= 6) {
-                                ranking = rank[2];
-                            } else if (rankIndex <= 8) {
-                                ranking = rank[1];
-                            } else {
-                                ranking = rank[0];
+        setTimeout(function() {
+            var skillsBar = new Chart($("#skillsBar").get(0).getContext("2d"), {
+                type: 'bar',
+                data: barData,
+                options: {
+                    responsiveAnimationDuration: 2400,
+                    animation: {
+                        duration: 2400,
+                        easing: "easeOutQuart",
+                    },
+                    tooltips: {
+                        callbacks: {
+                            beforeTitle: function(tooltipItem, data) {
+                                return data.labels[tooltipItem.index];
+                            },
+                            label: function(tooltipItem, data) {
+                                var rankIndex = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                                var ranking = "none";
+                                if (rankIndex <= 3) {
+                                    ranking = rank[3];
+                                } else if (rankIndex <= 6) {
+                                    ranking = rank[2];
+                                } else if (rankIndex <= 8) {
+                                    ranking = rank[1];
+                                } else {
+                                    ranking = rank[0];
+                                }
+                                return ranking;
                             }
-                            return ranking;
                         }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                padding: 5
+                            },
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                display: false,
+                                max: 10
+                            },
+                            gridLines: {
+                                display: false
+                            }
+                        }]
                     }
-                },
-                legend: {
-                    display: false
-                },
-                scales: {
-                    xAxes: [{
-                        ticks: {
-                            padding: 5
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }],
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            display: false,
-                            max: 10
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
                 }
-            }
 
-        });
+            });
+        }, dlay);
     }
 });
 
