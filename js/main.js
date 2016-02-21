@@ -370,13 +370,13 @@ $(window).scroll(function() {
 var breakdown = {
     web: {
         title: "From clean designs to pixel-perfect websites",
-        summary: "With great design come great responsibility.</p><p>Creating a beautiful mockup of your website is definitely helpful for mapping out your thoughts (definitely encouraged when working with a team), but means nothing if it can't be translated to a responsive, functional website. After all, your users are visiting your site for its <span class=\"itc\">content</span>. A clean, well-thought design is only one of many steps in successfully creating a beautifully unique experience for all users.",
+        summary: "With great design come great responsibility.</p><p>Creating a beautiful mockup of your website is definitely helpful for mapping out your thoughts (definitely encouraged when working with a team), but means nothing if it can't be translated to a responsive, functional website. After all, your users are visiting your site for its <span class=\"itc\">content</span>, not its well-chosen colors. A clean, well-thought design is only one of many steps in successfully creating a beautifully unique experience for all users.",
         logo: svg[4]
     },
 
     mobile: {
         title: "Mobile First, Mobile Second",
-        summary: "Mobile should definitely sit on top of every web developer's priorities. ",
+        summary: "Now exceeding desktop computers in internet traffic, the mobile trend is making the desktop a thing of the past.</p><p>The mobile first approach is exactly as it sounds: designing for the smallest screens and working your way up. With Google <a href=\"https://support.google.com/adsense/answer/6196932?hl=en\">considering mobile friendliness</a> as a criteria when ranking web pages, implementing a responsive design is a priority too expensive to ignore. So with that said, this makes mobile a close third as well.",
         logo: svg[5]
     },
 
@@ -388,28 +388,9 @@ var breakdown = {
 
     pong: {
         title: "Have fun while playing with code",
-        summary: "Testing and getting comfortable in your projects is an obvious step most developers prefer to skip.</p><p>Not this guy. Playing around with your code and experiencing the site from the eyes of your audience helps you find any flaws and inconsistencies, gives you inspiration for upcoming features, and helps you evaluate your work. Besides, what's the point of making an awesome website if you're not going to use it? It's almost like fixing yourself an ice cream cone and just watching it melt. ",
+        summary: "Testing and getting comfortable in your projects is an obvious step most developers prefer to skip.</p><p>Not this guy. Playing around with your code and experiencing the site from the eyes of your audience helps you find any bugs and inconsistencies, gives you inspiration for upcoming features, and helps you evaluate your work. Besides, what's the point of making an awesome website if you're not going to use it? It's almost like fixing yourself an ice cream cone and just watching it melt. ",
         logo: svg[7]
     }
-};
-
-$(function() {
-    for (var key in breakdown) {
-        var section = breakdown[key];
-        $("#skillsum").append('<div class="bkdown">' + section.logo + '<h4>' + section.title + '</h4><p>' + section.summary + '</p></div>');
-    }
-
-});
-// Projects Section
-
-var showcase = {
-    biggie: {
-        name: "Shine App",
-        title: "Shine Weather App (Under Construction)",
-        description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
-        link: "",
-        thumb: pT + img[4]
-    },
 };
 
 $(function() {
