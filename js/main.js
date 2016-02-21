@@ -394,6 +394,26 @@ var breakdown = {
 };
 
 $(function() {
+    for (var key in breakdown) {
+        var section = breakdown[key];
+        $("#skillsum").append('<div class="bkdown">' + section.logo + '<h4>' + section.title + '</h4><p>' + section.summary + '</p></div>');
+    }
+
+});
+// Projects Section
+
+var showcase = {
+    biggie: {
+        name: "Shine App",
+        title: "Shine Weather App (Under Construction)",
+        description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
+        link: "",
+        thumb: pT + img[4]
+    },
+};
+
+
+$(function() {
     $("#projects").html('<h2 class="sectiontitle whiteT"> My Projects</h2>');
 
     for (var key in showcase) {
