@@ -490,7 +490,7 @@ var resume = {
 $(function() {
     function showResume() {
         $(".myResume").html('<h3>Anthony Mejia</h3>')
-            .append('<hr><p class="resume-summary">Entry-level Front End Web Developer with experience in client services and HR</p>');
+            .append('<hr><p class="resume-summary">Entry-level Front End Web Developer with experience in Client Services and HR</p>');
         for (var key in resume) {
             var section = resume[key];
             $(".myResume").append('<div class="section ' + key + '"><h4 class="section-title">' + key + '</h4><hr></div>');
