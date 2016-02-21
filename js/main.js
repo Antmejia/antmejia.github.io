@@ -412,7 +412,6 @@ var showcase = {
     },
 };
 
-
 $(function() {
     $("#projects").html('<h2 class="sectiontitle whiteT"> My Projects</h2>');
 
