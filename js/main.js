@@ -285,7 +285,7 @@ $(window).scroll(function() {
                 responsiveAnimationDuration: 1900,
                 animation: {
                     duration: 1900,
-                    easing: "easeOutBack",
+                    easing: "easeInOutQuint",
                 },
                 tooltips: {
                     callbacks: {
