@@ -941,6 +941,7 @@ h3.total {
     border-radius: 5px;
     width: 150px;
     margin: 15px auto 0;
+    display: none;
 }
 
 .stats-button p {
