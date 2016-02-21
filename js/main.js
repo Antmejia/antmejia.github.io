@@ -281,7 +281,7 @@ $(window).scroll(function() {
             type: 'doughnut',
             data: donutData,
             options: {
-                cutoutPercentage: 60,
+                cutoutPercentage: 70,
                 responsiveAnimationDuration: 1900,
                 animation: {
                     duration: 1900,
