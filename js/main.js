@@ -373,7 +373,7 @@ var breakdown = {
 
     mobile: {
         title: "Mobile First, Mobile Second",
-        summary: "Now exceeding desktop computers in internet traffic, the mobile trend is making the desktop a thing of the past.</p><p>The mobile first approach is exactly as it sounds: designing for the smallest screens and working your way up. With Google <a href=\"https://support.google.com/adsense/answer/6196932?hl=en\">considering mobile friendliness</a> as a criteria when ranking web pages, implementing a responsive design is a priority too expensive to ignore. So with that said, this makes mobile a close third as well.",
+        summary: "Now exceeding desktop computers in internet traffic, the mobile trend is making the desktop a thing of the past.</p><p>The mobile first approach is exactly as it sounds: designing for the smallest screens and working your way up. With Google <a href=\"https://support.google.com/adsense/answer/6196932?hl=en\">considering mobile friendliness</a> as a criteria when ranking web pages, implementing a responsive design has become a priority too expensive to ignore. So with that said, this makes mobile a close third as well.",
         logo: svg[5]
     },
 
