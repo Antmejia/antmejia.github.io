@@ -476,9 +476,9 @@ var resume = {
     education: {
         college: "Borough of Manhattan Community College",
         city: "New York, NY",
-        startYear: "",
-        endYear: "",
-        major: ""
+        startYear: "2012",
+        endYear: "2015",
+        major: "Business Administration"
     },
 
     skills: ["Leadership", "Strategy", "Adobe Photoshop", "Adobe Illustrator", "Windows 10", "Google Apps", "Strategic Planning", "Time Management", "Fluent in Spanish", "Research", "Teamwork", "Data Entry", "Mac OS", "Human Resources", "Microsoft Office", "Customer Service", "PowerPoint", "Microsoft Word", "Microsoft Excel"]
@@ -508,9 +508,7 @@ $(function() {
             $(".experience ul:not(.highlights)").addClass("highlights");
         }
 
-        for (var key in resume.education) {
-
-        }
+        $(".education").append('<div class="degree"><p>' + resume.education.city + '</p><h6>' + resume.education.college + '</h6><h5>' + resume.education.major + '</h5><p>' + resume.education.startYear + ' - ' + resume.education.endYear + '</p></div>');
 
         for (var i = 0; i < resume.skills.length; i++) {
             var skill = resume.skills[i];

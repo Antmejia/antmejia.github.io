@@ -81,7 +81,6 @@ p,
 
 /**********COLORS**********/
 
-
 #preload, 
 #nojs {
     background-color: #1B2837;
@@ -93,7 +92,10 @@ p,
 }
 
 .navbar.opaque,
-#projects {
+#projects,
+#footer,
+.nojs-button,
+.inner-footer {
     background-color: #253C56;
 }
 
@@ -134,7 +136,8 @@ p,
 .position p, 
 .position h5,
 .legend-item h6,
-.bkdown h4 {
+.bkdown h4,
+.education {
     color: #415962;
 }
 
@@ -169,13 +172,7 @@ p,
 }
 
 .footer-cushion {
-    background-color: #4A6590;
-}
-
-#footer,
-.nojs-button,
-.inner-footer {
-	background-color: #314465;
+    background-color: #3D648E;
 }
 
 /**********NAVBAR**********/
@@ -717,6 +714,12 @@ h2.sectiontitle {
     margin: 50px 10% 5%;
 }
 
+.position p,
+.education p {
+    padding-left: 0;
+    font-size: 16.5px;
+}
+
 .myResume h3 {
     font-size: 33px;
     margin-bottom: -15px;
@@ -751,11 +754,6 @@ h2.sectiontitle {
     margin-bottom: 45px;
 }
 
-.position p {
-    padding-left: 0;
-    font-size: 16.5px;
-}
-
 .date {
     margin-top: -13px;
 }
@@ -770,6 +768,23 @@ h2.sectiontitle {
     list-style: circle;
     font-size: 16px;
     color: #6F7C82;
+}
+
+.education {
+	text-align: left;
+}
+
+.degree {
+	margin-bottom: 35px;
+}
+
+.education h6 {
+    font-size: 16.5px;
+}
+
+.education h5 {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .skills {
