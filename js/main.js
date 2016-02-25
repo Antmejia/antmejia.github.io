@@ -711,7 +711,7 @@ $(function() {
     }];
 
     $("#contact").html('<h2 class="sectiontitle"> Contact Me</h2>')
-        .append('<p class="conclusion">To provide feedback, please feel free to contact me.</p>')
+        .append('<p class="conclusion">To provide feedback, please feel free to use the email address below. </p>')
         .append('<div id="info"></div>');
 
     for (var i = 0; i < contact.length; i++) {
