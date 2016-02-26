@@ -422,8 +422,8 @@ $(function() {
     $("#projects a").click(function(ck) {
         $project = $(this).find(".projects");
         $prodes = $project.children(".prodes");
+        ck.preventDefault();
         if ($prodes.css("display") === "none") {
-            ck.preventDefault();
             $prodes.height($project.height()).css("margin-top", -($project.height()) + "px").velocity(
                 "transition.slideUpBigIn", {
                     duration: 1300,
