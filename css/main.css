@@ -558,9 +558,11 @@ h2.sectiontitle {
 
 /**********SKILLS**********/
 
+#skills {
+	padding-bottom: 10%;
+}
+
 .chart {
-    /*border: 1px solid red;*/
-    
     display: inline;
     text-align: center;
     left: 0;
