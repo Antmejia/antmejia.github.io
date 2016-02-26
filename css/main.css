@@ -112,11 +112,6 @@ p,
     background-color: transparent;
 }
 
-#menu-drop {
-    background-color: transparent;
-    overflow: hidden;
-}
-
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a,
 .navbar.opaque .navbar-nav > li > a,
@@ -210,6 +205,11 @@ p,
     display: none;
 }
 
+#menu-drop {
+    background: linear-gradient( rgba(0,0,0,0.1) 70%, transparent);
+    overflow: hidden;
+}
+
 /* Transition on scroll*/
 
 .navbar.opaque {
@@ -250,6 +250,10 @@ li.topbar {
         font-weight: bold;
         float: left;
         font-size: 40px;
+    }
+    
+    #menu-drop {
+        background: transparent;
     }
 
     ul.navbar-nav {
