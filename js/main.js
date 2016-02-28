@@ -404,7 +404,7 @@ var showcase = {
         name: "Shine App",
         title: "Shine Weather App (Under Construction)",
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
-        link: "",
+        link: "#!",
         thumb: pT + img[4]
     },
 };
@@ -422,8 +422,8 @@ $(function() {
     $("#projects a").click(function(ck) {
         $project = $(this).find(".projects");
         $prodes = $project.children(".prodes");
-        ck.preventDefault();
         if ($prodes.css("display") === "none") {
+        ck.preventDefault();
             $prodes.height($project.height()).css("margin-top", -($project.height()) + "px").velocity(
                 "transition.slideUpBigIn", {
                     duration: 1300,
