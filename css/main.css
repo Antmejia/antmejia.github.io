@@ -185,6 +185,10 @@ p,
     overflow: hidden;
 }
 
+.trans #menu-drop {
+        background: transparent;
+    }
+
 .navicon {
     height: 40px;
 }
