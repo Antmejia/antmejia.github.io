@@ -209,10 +209,6 @@ p,
 	overflow: hidden;
 }
 
-.trans #menu-drop {
-    background: linear-gradient( rgba(0,0,0,0.125) 70%, transparent);
-}
-
 /* Transition on scroll*/
 
 .navbar.opaque {
@@ -246,6 +242,15 @@ li.topbar {
     display: none;
 }
 
+/**********  NAVBAR (max - 799px)  **********/
+
+@media (max-width: 799px) {
+    
+    .trans #menu-drop {
+        background: linear-gradient( rgba(0,0,0,0.125) 70%, transparent);
+    }
+}
+
 /**********  NAVBAR (min - 800px)  **********/
 
 @media (min-width: 800px) {
@@ -255,10 +260,6 @@ li.topbar {
         font-size: 40px;
     }
     
-    #menu-drop {
-        background: transparent;
-    }
-
     ul.navbar-nav {
         margin: 6px auto 0;
         float: right;
