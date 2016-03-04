@@ -112,9 +112,9 @@ $(document).ready(function() {
                 $navLine.css("left", $(".topbar").first().position().left)
                 $(".topbar a").click(function moveLine() {
                     autoScroll = true;
-                    tBar = $(this);
-                    leftPos = tBar.parent().position().left;
-                    barWidth = tBar.parent().width();
+                    topBar = $(this);
+                    leftPos = topBar.parent().position().left;
+                    barWidth = topBar.parent().width();
                     $navLine.stop().velocity({
                         left: leftPos,
                         width: barWidth
@@ -123,7 +123,7 @@ $(document).ready(function() {
                             autoScroll = false;
                         }
                     });
-                    tBar.parent().addClass("curTab").siblings().removeClass("curTab");
+                    topBar.parent().addClass("curTab").siblings().removeClass("curTab");
                 });
             }
         });

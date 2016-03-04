@@ -16,7 +16,7 @@ var canvasWidth = 0;
 var navWidth = 0;
 var preTime = 5200 + Math.floor(Math.random() * 700);
 var $sections = $('.main-section');
-var $project, $prodes, tBar, leftPos, barWidth, $nav = $(".navbar");
+var $project, $prodes, topBar, leftPos, barWidth, $nav = $(".navbar");
 
 var myBio = "Born and raised in the Empire City, I'm currently pursuing a career as a Front-End Web Developer. I've always had a passion for turning ideas into something that is functional, yet engaging; creating interactive and appealing web experiences. As I continue to improve my coding and design skills, my showcase will continue to grow while learning from every project I take on. Self taught and self motivated, I only have one opponent: Internet Explorer.</p> <p class=\"mybio\">In my spare time, you can find me shooting hoops, watching football, playing video games, and spending quality time with my family.";
 var rank = ["Expert", "Advanced", "Average", "Beginner"];
@@ -157,9 +157,9 @@ $(function() {
                 var distance = $(this).offset().top - $(window).scrollTop();;
                 var navLink = $(".topbar a").filter("[href='#" + id + "']");
                 if (distance >= 25 && distance <= 85) {
-                    tBar = navLink;
-                    leftPos = tBar.parent().position().left;
-                    barWidth = tBar.parent().width();
+                    topBar = navLink;
+                    leftPos = topBar.parent().position().left;
+                    barWidth = topBar.parent().width();
                     if (windWidth > 800) {
                         $("#navline").velocity("stop", true).velocity({
                             left: leftPos,
@@ -171,7 +171,7 @@ $(function() {
                             "width": barWidth
                         });
                     }
-                    tBar.parent().addClass("curTab").siblings().removeClass("curTab");
+                    topBar.parent().addClass("curTab").siblings().removeClass("curTab");
                 }
             });
         }
