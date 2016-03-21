@@ -14,7 +14,7 @@ var inProgress = false;
 var autoScroll = false;
 var canvasWidth = 0;
 var navWidth = 0;
-var preTime = 5200 + Math.floor(Math.random() * 700);
+var preTime = 3200;
 var $sections = $('.main-section');
 var $project, $prodes, tBar, leftPos, barWidth, $nav = $(".navbar");
 
@@ -591,8 +591,9 @@ $(function() {
 
                     $(".myResume *").velocity(
                         "transition.slideUpOut", {
-                            delay: 800,
-                            stagger: 150,
+                            delay: 1200,
+                            stagger: 20,
+                            drag: true,
                             backwards: false,
                             complete: function() {
                                     $(".myResume").css("display", "block").html('<div class="point-section"></div>').append('<div id="badges"></div>');
@@ -665,7 +666,7 @@ $(function() {
             if ($button.text() === "View Resume") {
                 $(".myResume *").velocity(
                     "transition.slideUpOut", {
-                        delay: 2500,
+                        delay: 1200,
                         drag: true,
                         complete: function() {
                             $(".myResume").css("display", "none");

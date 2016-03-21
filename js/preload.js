@@ -15,7 +15,7 @@ $(document).ready(function() {
     $("#preload svg").velocity({
         opacity: 1
     }, {
-        duration: 1000,
+        duration: 800,
         delay: preTime - 2600
     });
 
@@ -23,15 +23,15 @@ $(document).ready(function() {
         .velocity({
             opacity: 1
         }, {
-            duration: 1000,
+            duration: 800,
             delay: preTime - 2200
         });
 
     // Animate name in
     $(".preDiv h2").velocity(
         "transition.slideDownIn", {
-            duration: 1000,
-            delay: preTime - 300, //1700
+            duration: 1400,
+            delay: preTime - 1700, //1700
             complete: function() {
                 $("body").scrollTop(0);
                 scrollOnceArrow = false;
@@ -44,7 +44,7 @@ $(document).ready(function() {
     $(".preBar").velocity(
             "transition.expandIn", {
                 duration: 700,
-                delay: preTime + 900 //2700
+                delay: preTime - 300 //2700
             })
         .velocity({
             width: "86%"
@@ -57,8 +57,8 @@ $(document).ready(function() {
         height: 0,
         opacity: 0.85
     }, {
-        delay: preTime + 4800, // 6800, 
-        duration: 700,
+        delay: preTime + 2300, // 6800, 
+        duration: 900,
         easing: "ease-in-out"
     });
 
@@ -66,16 +66,18 @@ $(document).ready(function() {
         scale: 0.3,
         opacity: 0.3,
     }, {
-        delay: preTime + 5500, //6500,
+        delay: preTime + 2700, //6500,
         duration: 600,
         easing: "swing",
-        complete: function() {$("#preload").remove();}
+        complete: function() {
+            $("#preload").remove();
+        }
     });
 
     $(".prelogo").velocity({
         translateY: -(($("#preload svg").height())) + "px"
     }, {
-        delay: preTime + 4650, //6500,
+        delay: preTime + 2560, //6500,
         duration: 600,
         easing: "easeInQuart"
     });
@@ -84,26 +86,26 @@ $(document).ready(function() {
 
         $(".buns").velocity(
             "transition.slideRightIn", {
-                delay: preTime + 7800, // 9800
+                delay: preTime + 3900, // 9800
                 duration: 700
             });
 
         $(".navicon svg").velocity(
             "transition.slideLeftIn", {
-                delay: preTime + 6800,
+                delay: preTime + 3650,
                 duration: 800,
                 easing: "ease-in-out"
             });
     } else {
         $(".logoName").velocity(
             "transition.slideUpIn", {
-                delay: preTime + 6800,
+                delay: preTime + 3650,
                 duration: 1050
             });
     }
     $("li.topbar").velocity(
         "transition.fadeIn", {
-            delay: preTime + 7900,
+            delay: preTime + 4400,
             duration: 700,
             complete: function() {
 
@@ -130,13 +132,13 @@ $(document).ready(function() {
 
     $("#bigJoe p").velocity(
         "transition.slideDownIn", {
-            delay: preTime + 9200, //11000
+            delay: preTime + 5000, //11000
             duration: 1400
         });
 
     $(".arrowhome").velocity(
         "transition.slideDownIn", {
-            delay: preTime + 10000, //11000
+            delay: preTime + 5250, //11000
             duration: 1900,
             complete: function() {
                 $("body").css("overflow", "visible");              
