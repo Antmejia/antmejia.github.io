@@ -474,11 +474,11 @@ var resume = {
     }],
 
     education: {
-        college: "Borough of Manhattan Community College",
+        college: "City College of the University of New York",
         city: "New York, NY",
         startYear: "2012",
-        endYear: "2015",
-        major: "Business Administration"
+        endYear: "2016",
+        major: "B.S in Computer Science, Mathematics"
     },
 
     skills: ["Leadership", "Strategy", "Adobe Photoshop", "Adobe Illustrator", "Windows 10", "Google Apps", "Strategic Planning", "Time Management", "Fluent in Spanish", "Research", "Teamwork", "Data Entry", "Mac OS", "Human Resources", "Microsoft Office", "Customer Service", "PowerPoint", "Microsoft Word", "Microsoft Excel"]
