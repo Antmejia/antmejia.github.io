@@ -477,7 +477,7 @@ var resume = {
         college: "City College of the University of New York",
         city: "New York, NY",
         gradDate: "Jan 2016",
-        major: "B.S in Computer Science, Mathematics"
+        major: "B.S in Computer Science"
     },
 
     skills: ["Leadership", "Strategy", "Adobe Photoshop", "Adobe Illustrator", "Windows 10", "Google Apps", "Strategic Planning", "Time Management", "Fluent in Spanish", "Research", "Teamwork", "Data Entry", "Mac OS", "Human Resources", "Microsoft Office", "Customer Service", "PowerPoint", "Microsoft Word", "Microsoft Excel"]
