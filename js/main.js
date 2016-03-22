@@ -476,8 +476,7 @@ var resume = {
     education: {
         college: "City College of the University of New York",
         city: "New York, NY",
-        startYear: "2012",
-        endYear: "2016",
+        gradDate: "Jan 2016",
         major: "B.S in Computer Science, Mathematics"
     },
 
@@ -508,7 +507,7 @@ $(function() {
             $(".experience ul:not(.highlights)").addClass("highlights");
         }
 
-        $(".education").append('<div class="degree"><p>' + resume.education.city + '</p><h6>' + resume.education.college + '</h6><h5>' + resume.education.major + '</h5><p>' + resume.education.startYear + ' - ' + resume.education.endYear + '</p></div>');
+        $(".education").append('<div class="degree"><p>' + resume.education.city + '</p><h6>' + resume.education.college + '</h6><h5>' + resume.education.major + '</h5><p>' + resume.education.gradDate + '</p></div>');
 
         for (var i = 0; i < resume.skills.length; i++) {
             var skill = resume.skills[i];
