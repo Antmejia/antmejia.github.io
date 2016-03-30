@@ -251,7 +251,7 @@ li.topbar {
 @media (max-width: 799px) {
     
     .trans #menu-drop {
-        background: linear-gradient( rgba(0,0,0,0.125) 70%, transparent);
+        background: transparent; /*linear-gradient( rgba(0,0,0,0.125) 70%, transparent);*/
     }
 }
 
