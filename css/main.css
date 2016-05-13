@@ -70,8 +70,8 @@ h2.sectiontitle,
 #aboutface h3,
 #aboutface h4,
 #bigJoe p,
-.section-title
-.prodes h4 {
+.section-title,
+.projects h4 {
     font-family: "Josefin Sans", sans-serif;
 }
 
