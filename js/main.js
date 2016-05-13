@@ -406,7 +406,21 @@ var showcase = {
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
         link: "#!",
         thumb: pT + img[4]
-    },    
+    },
+    pj2: {
+        name: "goLBM",
+        title: "Lincoln Business Machines",
+        description: "New York computer repair company.",
+        link: "http://golbm.com",
+        thumb: pT + img[4]
+    },
+    pj3: {
+        name: "eshalsoft",
+        title: "EshalSoft Web Agency",
+        description: "Web design/development agency which specializes in building custom web applications.",
+        link: "http://www.eshalsoft.com",
+        thumb: pT + img[4]
+    },
 };
 
 $(function() {
@@ -414,7 +428,7 @@ $(function() {
 
     for (var key in showcase) {
         var projects = showcase[key];
-        $("#projects").append('<a href="' + projects.link + '"><div class="projects"> <img src="' + projects.thumb + '">' + '<div class="prodes"><h4>' + projects.title + '</h4><p>' + projects.description + '</p></div></div></a>');
+        $("#projects").append('<a href="' + projects.link + '" target="_blank"><div class="projects"> <img src="' + projects.thumb + '">' + '<div class="prodes"><h4>' + projects.title + '</h4><p>' + projects.description + '</p></div></div></a>');
         $("#projects img:not(.thumb)").attr("alt", projects.name + " project")
             .attr("class", "thumb");
     }
