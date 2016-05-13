@@ -3,7 +3,7 @@
 // Load variables
 
 var pT = "img/";
-var img = ["nycity-blur.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "shineapp.jpg"];
+var img = ["city-45.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "shineapp.jpg"];
 var windHeight = $(window).height();
 var windWidth = $(window).width();
 var scrollOnceArrow = false;
@@ -400,13 +400,13 @@ $(function() {
 // Projects Section
 
 var showcase = {
-    biggie: {
-        name: "Shine App",
-        title: "Shine Weather App (Under Construction)",
+    pj1: {
+        name: "lumn app",
+        title: "lumn Weather App (Under Construction)",
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
         link: "#!",
         thumb: pT + img[4]
-    },
+    },    
 };
 
 $(function() {
@@ -426,12 +426,12 @@ $(function() {
         ck.preventDefault();
             $prodes.height($project.height()).css("margin-top", -($project.height()) + "px").velocity(
                 "transition.slideUpBigIn", {
-                    duration: 1300,
+                    duration: 800,
                     easing: "easeOutSine"
                 });
             $prodes.children("p").velocity(
                 "transition.slideLeftIn", {
-                    delay: 1100,
+                    delay: 500,
                     easing: "easeInCubic"
                 });
         }
