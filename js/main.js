@@ -281,8 +281,8 @@ $(window).scroll(function() {
             type: 'doughnut',
             data: donutData,
             options: {
-                cutoutPercentage: 70,
-                responsiveAnimationDuration: dlay,
+                cutoutPercentage: 80,
+                responsiveAnimationDuration: dlay,                
                 animation: {
                     duration: dlay,
                     easing: "easeInOutQuint",
@@ -295,6 +295,11 @@ $(window).scroll(function() {
                         label: function(tooltipItem, data) {
                             return data.labels[tooltipItem.index];
                         }
+                    }
+                },
+                elements: {
+                    arc: {
+                        borderWidth: 0
                     }
                 },
                 legend: {
