@@ -671,7 +671,7 @@ h2.sectiontitle {
 /**********PROJECTS**********/
 
 .projects {
-    width: 75%;
+    width: 85%;
     overflow: hidden;
     margin: 0 auto 25px;
     border-radius: 5%;
@@ -686,12 +686,12 @@ h2.sectiontitle {
 .prodes {
     margin-bottom: -37px;
     padding-top: 30px;
-    border-radius: 5%;
+    border-radius: 4.4%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.65);
     display: none;
     position: relative;
-    text-align: justify;
+    text-align: left;
 }
 
 .projects h4 {
@@ -717,6 +717,7 @@ h2.sectiontitle {
 
     .projects {
         width: 30%;
+        max-width: 200px;
         display: inline-block;
         margin: 2.5% 5%;    
     } 
