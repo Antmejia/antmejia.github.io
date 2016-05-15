@@ -492,7 +492,7 @@ $(function() {
             $("#promodal *").not(".modal-close-button").velocity(
         "transition.slideDownOut", {
             begin: function() {},
-            delay: 300,
+            delay: 250,
             display: "block",
             backwards: true,
             stagger: 50,
@@ -505,8 +505,8 @@ $(function() {
         });  
             modal.velocity(
                 "transition.shrinkOut", {      
-                 delay: 600,
-                 duration: 700,
+                 delay: 750,
+                 duration: 400,
                  complete: function() {
                      $("body").css("overflow", "initial");
                  }
