@@ -3,7 +3,7 @@
 // Load variables
 
 var pT = "img/";
-var img = ["city-45.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "shineapp.jpg"];
+var img = ["city-45.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "shineapp.jpg", "pj2.jpg", "pj3.jpg"];
 var windHeight = $(window).height();
 var windWidth = $(window).width();
 var scrollOnceArrow = false;
@@ -417,14 +417,14 @@ var showcase = {
         title: "Lincoln Business Machines",
         description: "New York computer repair company.",
         link: "http://golbm.com",
-        thumb: pT + img[4]
+        thumb: pT + img[5]
     },
     pj3: {
         name: "eshalsoft",
         title: "EshalSoft Web Agency",
         description: "Web design/development agency which specializes in building custom web applications.",
         link: "http://www.eshalsoft.com",
-        thumb: pT + img[4]
+        thumb: pT + img[6]
     },
 };
 
@@ -437,20 +437,20 @@ $(function() {
         $("#projects img:not(.thumb)").attr("alt", projects.name + " project")
             .attr("class", "thumb");
     }
-
-    $("#projects a").click(function(ck) {
+    // Animates in the project descriptions when clicked.
+    $("#projects a").click(function(ev) {
         $project = $(this).find(".projects");
         $prodes = $project.children(".prodes");
         if ($prodes.css("display") === "none") {
-        ck.preventDefault();
+        ev.preventDefault();
             $prodes.height($project.height()).css("margin-top", -($project.height()) + "px").velocity(
                 "transition.slideUpBigIn", {
-                    duration: 800,
+                    duration: 600,
                     easing: "easeOutSine"
                 });
             $prodes.children("p").velocity(
                 "transition.slideLeftIn", {
-                    delay: 500,
+                    delay: 100,
                     easing: "easeInCubic"
                 });
         }
