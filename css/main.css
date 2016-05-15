@@ -732,7 +732,24 @@ h2.sectiontitle {
 	display: block;
 }
 
-
+@media (min-width: 800px) {
+	.modal-title h4 {
+	    font-size: 36px;
+	}
+	
+	.modal-close-button {
+		margin-right: 20px;
+	}
+	
+	.modal-body img {
+	    height: 60%;
+	}
+	
+	.modal-wrapper {
+		height: 40%;
+	}
+	
+}
 /***MODAL***/
 
 .projects {
