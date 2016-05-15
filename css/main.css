@@ -148,12 +148,14 @@ p,
 
 .reportcard-button,
 .resume-button,
-#info a:hover {
+#info a:hover, 
+.modal-close-button {
 	color: #2188FF;
 }
 
 .reportcard-button:hover,
-.resume-button:hover {
+.resume-button:hover,
+.modal-close-button:active {
 	color: #3268A4;
 }
 
@@ -670,6 +672,69 @@ h2.sectiontitle {
 
 /**********PROJECTS**********/
 
+/***MODAL***/
+
+#promodal {
+	height: 100vh;
+	width: 100%;
+	background-color: #F9F9F9;
+	position: fixed;
+	display: none;
+	text-align: left;
+	top: 0;
+	z-index: 3000;
+	overflow: hidden;
+}
+
+.modal-close-button {
+	margin: 10px 5px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	width: 50px;
+}
+
+.modal-title h4 {
+	font-size: 26px;
+	width: 80%;
+	margin: 40px auto 0;
+	display: block;
+}
+
+.modal-title p {
+	font-size: 11px;
+}
+
+.modal-body {
+	height: 70%;
+	width: 100%;
+	display: block;
+	position: absolute;
+}
+
+.modal-body img {
+	height: 40%;
+	width: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+.modal-wrapper {
+	overflow: auto;
+	height: 60%;
+}
+
+.modal-button a {
+	width: 120px; 
+	padding: 6px 0;
+	text-align: center;
+	margin: 10px auto;
+	display: block;
+}
+
+
+/***MODAL***/
+
 .projects {
     width: 85%;
     overflow: hidden;
@@ -994,7 +1059,7 @@ h3.total {
 /***********NO JAVASCRIPT***********/
 
 body {
-    overflow: none;
+    overflow: hidden;
     position: fixed;
 }
 

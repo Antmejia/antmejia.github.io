@@ -51,6 +51,34 @@ var social = {
     }
 };
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+function responsiveHeight() {
+	if(isMobile.any()) {
+        return screen.height;
+    }
+    else {
+        return $(window).height();
+    }
+};
 // Function to detect if an element is inside the viewport
 $.fn.isOnScreen = function() {
     var viewport = {};
@@ -92,7 +120,7 @@ $(function() {
     $(".navicon svg")[0].setAttribute("preserveAspectRatio", "xMaxYMax meet");
 
     // Format main image to fit window
-    $("#bigJoe").show().height(windHeight + 10);
+    $("#bigJoe").show().height(responsiveHeight());
 
     // Adjust text and set max font size
     $("#bigJoe p").css("font-size", (windWidth * 0.08) + "px");
@@ -104,7 +132,7 @@ $(function() {
 // Adjust elements on window resize
 $(window).resize(function() {
     windWidth = $(window).width();
-    windHeight = $(window).height();
+    windHeight = responsiveHeight();
     $("#bigJoe").height(windHeight + 10);
     $(".main-section").css("min-height", windHeight + $(".navbar-default").height());
     if (windWidth < 800 && preFinish === true) {
@@ -405,55 +433,96 @@ $(function() {
 // Projects Section
 
 var showcase = {
-    pj1: {
-        name: "lumn app",
+    lumn: {
+        name: "lumn",
         title: "lumn Weather App (Under Construction)",
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
         link: "#!",
         thumb: pT + img[4]
     },
-    pj2: {
+    goLBM: {
         name: "goLBM",
         title: "Lincoln Business Machines",
         description: "New York computer repair company.",
         link: "http://golbm.com",
         thumb: pT + img[5]
     },
-    pj3: {
+    eshalsoft: {
         name: "eshalsoft",
         title: "EshalSoft Web Agency",
-        description: "Web design/development agency which specializes in building custom web applications.",
+        description: "Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications.   Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications.",
         link: "http://www.eshalsoft.com",
         thumb: pT + img[6]
     },
 };
 
 $(function() {
-    $("#projects").html('<h2 class="sectiontitle whiteT"> My Projects</h2>');
-
+    $("#projects").html('<h2 class="sectiontitle whiteT"> My Projects</h2><div id="promodal"></div>');
+    function showModal(obj) {
+       var modal = $("#promodal");
+       $("body").css("overflow", "hidden");
+       modal.html('<div class="modal-close-button">Close</div><div class="modal-title"></div><div class="modal-body"></div>');
+      $(".modal-title").append('<h4>' + obj.title + '</h4>');
+      $(".modal-body").append('<img src="' + pT + obj.name + '-screen.jpg"><div class="modal-button"><a href="' + obj.link + '" target="_blank">View Website</a></div><div class="modal-wrapper"><p>' + obj.description + '</p></div>');
+      // Animations
+      modal.velocity(
+        "transition.fadeIn", {
+            begin: function() {
+                $("#promodal *").css("display", "none");
+                modal.height(responsiveHeight());
+            },
+            duration: 700,
+            delay: 300
+        });        
+        $("#promodal *").not(".modal-close-button").velocity(
+        "transition.slideUpIn", {
+            begin: function() {},
+            delay: 600,
+            display: "block",
+            stagger: 50,
+            duration: 500
+        });
+        $(".modal-close-button").velocity(
+        "transition.fadeIn", {
+            delay: 900,
+            duration: 700
+        });  
+        
+        $(".modal-close-button").click(function() {
+            $("#promodal *").not(".modal-close-button").velocity(
+        "transition.slideDownOut", {
+            begin: function() {},
+            delay: 300,
+            display: "block",
+            backwards: true,
+            stagger: 50,
+            duration: 500
+        });
+        $(".modal-close-button").velocity(
+        "transition.fadeOut", {
+            delay: 100,
+            duration: 700
+        });  
+            modal.velocity(
+                "transition.shrinkOut", {      
+                 delay: 600,
+                 duration: 700,
+                 complete: function() {
+                     $("body").css("overflow", "initial");
+                 }
+            });
+        });
+    }
     for (var key in showcase) {
         var projects = showcase[key];
-        $("#projects").append('<a href="' + projects.link + '" target="_blank"><div class="projects"> <img src="' + projects.thumb + '">' + '<div class="prodes"><h4>' + projects.title + '</h4><p>' + projects.description + '</p></div></div></a>');
-        $("#projects img:not(.thumb)").attr("alt", projects.name + " project")
-            .attr("class", "thumb");
+        $("#projects").append('<div class="projects"> <img src="' + projects.thumb + '">' + '<div class="prodes"><h4>' + projects.title + '</h4><p>' + projects.description + '</p></div></div>');
+        $("#projects img:not(.thumb)").attr("alt", projects.name)
+         .attr("class", "thumb");
     }
     // Animates in the project descriptions when clicked.
-    $("#projects a").click(function(ev) {
-        $project = $(this).find(".projects");
-        $prodes = $project.children(".prodes");
-        if ($prodes.css("display") === "none") {
-        ev.preventDefault();
-            $prodes.height($project.height()).css("margin-top", -($project.height()) + "px").velocity(
-                "transition.slideUpBigIn", {
-                    duration: 600,
-                    easing: "easeOutSine"
-                });
-            $prodes.children("p").velocity(
-                "transition.slideLeftIn", {
-                    delay: 100,
-                    easing: "easeInCubic"
-                });
-        }
+    $(".projects").click(function() {
+        var name = $(this).children("img").attr("alt");
+        showModal(showcase[name]);
     });
     // Resume Section
     $("#resume").html('<h2 class="sectiontitle"> My Resume</h2>')
