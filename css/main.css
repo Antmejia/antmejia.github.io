@@ -71,7 +71,8 @@ h2.sectiontitle,
 #aboutface h4,
 #bigJoe p,
 .section-title,
-.projects h4 {
+.projects h4,
+.modal-title h4 {
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -735,6 +736,7 @@ h2.sectiontitle {
 @media (min-width: 800px) {
 	.modal-title h4 {
 	    font-size: 36px;
+	    text-align: center;
 	}
 	
 	.modal-close-button {
