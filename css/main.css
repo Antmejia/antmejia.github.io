@@ -748,8 +748,10 @@ h2.sectiontitle {
 	}
 	
 	.modal-wrapper {
-		height: 40%;
+		height: 50%;
 		width: 65%;
+		margin: 0 auto;
+		display: block;
 	}
 	
 }
