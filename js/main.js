@@ -885,9 +885,4 @@ $(document).ready( function() {
 		var typeDetail = $(this).attr("id");
 		ga('send', 'event', 'contact', 'click', typeDetail);
 	});
-	
-    $(".topbar").click(function() {
-        var topText = $(this).text();
-        ga('send', 'event', 'navbar', 'click', topText);
-    });
 });
