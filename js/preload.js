@@ -137,7 +137,7 @@ $(document).ready(function() {
         });
 
     $(".arrowhome").velocity(
-        "transition.slideDownIn", {
+        "transition.slideDownBigIn", {
             delay: preTime + 5250, //11000
             duration: 1900,
             complete: function() {

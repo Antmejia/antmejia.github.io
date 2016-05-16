@@ -450,7 +450,7 @@ var showcase = {
     eshalsoft: {
         name: "eshalsoft",
         title: "EshalSoft Web Agency",
-        description: "Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications.   Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications. Web design/development agency which specializes in building custom web applications.",
+        description: "Eshalsoft is an Australian based web design/development agency which specializes in building custom web applications for customers looking to expand their web presence. ",
         link: "http://www.eshalsoft.com",
         thumb: pT + img[6]
     },
@@ -707,7 +707,7 @@ $(function() {
                                     });
                                     $(".myResume *").velocity(
                                         "transition.slideDownIn", {
-                                            stagger: 150,
+                                            stagger: 50,
                                             complete: function() {
                                                 var skillsResume = new Chart($("#skillsResume").get(0).getContext("2d"), {
                                                     type: 'doughnut',
