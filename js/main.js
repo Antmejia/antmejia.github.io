@@ -71,11 +71,11 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+
 function responsiveHeight() {
-	if(isMobile.any()) {
+    if (isMobile.any()) {
         return screen.height;
-    }
-    else {
+    } else {
         return $(window).height();
     }
 };
@@ -219,7 +219,7 @@ $(function() {
     $("#aboutface").append('<img class="proPic" alt="Profile Picture" src="' + (pT + img[2]) + '">')
         .append('<h3> Anthony Mejia</h3><h4> New York, NY</h4><hr>');
 
-    for (var key in social) { 
+    for (var key in social) {
         var media = social[key];
         $("#aboutface").append('<a href="' + media.link + '">' + media.icon + '</a>');
         $("svg:not(.social-icon)").attr("alt", media.platform + " icon")
@@ -304,13 +304,13 @@ $(window).scroll(function() {
         // alert("Canvas is inside viewpoint");
         scrollOnceChart = true;
 
-        var dlay = 2000
+        var dlay = 1200
         var skillsDonut = new Chart($("#skillsDonut").get(0).getContext("2d"), {
             type: 'doughnut',
             data: donutData,
             options: {
                 cutoutPercentage: 80,
-                responsiveAnimationDuration: dlay,                
+                responsiveAnimationDuration: dlay,
                 animation: {
                     duration: dlay,
                     easing: "easeInOutQuint",
@@ -341,9 +341,9 @@ $(window).scroll(function() {
                 type: 'bar',
                 data: barData,
                 options: {
-                    responsiveAnimationDuration: 2400,
+                    responsiveAnimationDuration: 1400,
                     animation: {
-                        duration: 2400,
+                        duration: 1400,
                         easing: "easeOutQuart",
                     },
                     tooltips: {
@@ -458,72 +458,74 @@ var showcase = {
 
 $(function() {
     $("#projects").html('<h2 class="sectiontitle whiteT"> My Projects</h2><div id="promodal"></div>');
+
     function showModal(obj) {
-       var modal = $("#promodal");
-       $("body").css("overflow", "hidden");
-       modal.html('<div class="modal-close-button">Close</div><div class="modal-title"></div><div class="modal-body"></div>');
-      $(".modal-title").append('<h4>' + obj.title + '</h4>');
-      $(".modal-body").append('<img src="' + pT + obj.name + '-screen.jpg"><div class="modal-button"><a href="' + obj.link + '" target="_blank">View Website</a></div><div class="modal-wrapper"><p>' + obj.description + '</p></div>');
-      // Animations
-      modal.velocity(
-        "transition.fadeIn", {
-            begin: function() {
-                $("#promodal *").css("display", "none");
-                modal.height(responsiveHeight());
-            },
-            duration: 700,
-            delay: 300
-        });        
+        var modal = $("#promodal");
+        $("body").css("overflow", "hidden");
+        modal.html('<div class="modal-close-button">Close</div><div class="modal-title"></div><div class="modal-body"></div>');
+        $(".modal-title").append('<h4>' + obj.title + '</h4>');
+        $(".modal-body").append('<img src="' + pT + obj.name + '-screen.jpg"><div class="modal-button"><a href="' + obj.link + '" target="_blank">View Website</a></div><div class="modal-wrapper"><p>' + obj.description + '</p></div>');
+        // Animations
+        modal.velocity(
+            "transition.fadeIn", {
+                begin: function() {
+                    $("#promodal *").css("display", "none");
+                    modal.height(responsiveHeight());
+                },
+                duration: 700,
+                delay: 300
+            });
         $("#promodal *").not(".modal-close-button").velocity(
-        "transition.slideUpIn", {
-            begin: function() {},
-            delay: 600,
-            display: "block",
-            stagger: 50,
-            duration: 500
-        });
+            "transition.slideUpIn", {
+                begin: function() {},
+                delay: 600,
+                display: "block",
+                stagger: 50,
+                duration: 500
+            });
         $(".modal-close-button").velocity(
-        "transition.fadeIn", {
-            delay: 900,
-            duration: 700
-        });  
-        
+            "transition.fadeIn", {
+                delay: 900,
+                duration: 700
+            });
+
         $(".modal-close-button").click(function() {
             $("#promodal *").not(".modal-close-button").velocity(
-        "transition.slideDownOut", {
-            begin: function() {},
-            delay: 250,
-            display: "block",
-            backwards: true,
-            stagger: 50,
-            duration: 500
-        });
-        $(".modal-close-button").velocity(
-        "transition.fadeOut", {
-            delay: 100,
-            duration: 700
-        });  
+                "transition.slideDownOut", {
+                    begin: function() {},
+                    delay: 250,
+                    display: "block",
+                    backwards: true,
+                    stagger: 50,
+                    duration: 500
+                });
+            $(".modal-close-button").velocity(
+                "transition.fadeOut", {
+                    delay: 100,
+                    duration: 700
+                });
             modal.velocity(
-                "transition.shrinkOut", {      
-                 delay: 750,
-                 duration: 400,
-                 complete: function() {
-                     $("body").css("overflow", "initial");
-                 }
-            });
+                "transition.shrinkOut", {
+                    delay: 750,
+                    duration: 400,
+                    complete: function() {
+                        $("body").css("overflow", "initial");
+                    }
+                });
         });
     }
     for (var key in showcase) {
         var projects = showcase[key];
         $("#projects").append('<div class="projects"> <img src="' + projects.thumb + '">' + '<div class="prodes"><h4>' + projects.title + '</h4><p>' + projects.description + '</p></div></div>');
         $("#projects img:not(.thumb)").attr("alt", projects.name)
-         .attr("class", "thumb");
+            .attr("class", "thumb");
     }
     // Animates in the project descriptions when clicked.
     $(".projects").click(function() {
         var name = $(this).children("img").attr("alt");
         showModal(showcase[name]);
     });
+    
     // Resume Section
     $("#resume").html('<h2 class="sectiontitle"> My Resume</h2>')
         .append('<div class="reportcard-button">View Report Card</div>')
@@ -601,7 +603,7 @@ $(function() {
             var skill = resume.skills[i];
             $(".skills").append('<p> ' + skill + ' </p>');
         }
-        
+
         $(".myResume").append('<a href="Antmejia.pdf" target="_blank"><div class="resume-button">Download Resume</div></a>');
     };
 
@@ -848,7 +850,7 @@ $(function() {
             height: "100%"
         }, {
             delay: 1100,
-            duration: 1200          
+            duration: 1200
         });
 
         $(".navbar").velocity(
@@ -870,19 +872,19 @@ $(function() {
 
 
 // Analytical Stuff
-$(document).ready( function() {
-	
-	$("[class$='-button']").click(function() {
-		var buttonText = $(this).text();
-		ga('send', 'event', 'button', 'click', buttonText);
-	});
-	
-	$("#bigJoe a").click(function() {
-		ga('send', 'event', 'bigJoe', 'click', "Arrow Down");
-	});
-	
-	$(".detail").click(function() {
-		var typeDetail = $(this).attr("id");
-		ga('send', 'event', 'contact', 'click', typeDetail);
-	});
+$(document).ready(function() {
+
+    $("[class$='-button']").click(function() {
+        var buttonText = $(this).text();
+        ga('send', 'event', 'button', 'click', buttonText);
+    });
+
+    $("#bigJoe a").click(function() {
+        ga('send', 'event', 'bigJoe', 'click', "Arrow Down");
+    });
+
+    $(".detail").click(function() {
+        var typeDetail = $(this).attr("id");
+        ga('send', 'event', 'contact', 'click', typeDetail);
+    });
 });
