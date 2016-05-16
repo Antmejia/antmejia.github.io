@@ -443,7 +443,7 @@ var showcase = {
     goLBM: {
         name: "goLBM",
         title: "Lincoln Business Machines",
-        description: "New York computer repair company.",
+        description: "LBM is a computer repair service company with a reputation for providing individualized attention to its clients, striving to be the most innovative technology company in the country.",
         link: "http://golbm.com",
         thumb: pT + img[5]
     },
