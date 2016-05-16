@@ -887,4 +887,9 @@ $(document).ready(function() {
         var typeDetail = $(this).attr("id");
         ga('send', 'event', 'contact', 'click', typeDetail);
     });
+    
+    $(".projects").click(function() {
+        var proName = $(this).children("img").attr("alt");
+        ga('send', 'event', 'project', 'click', proName);
+    });   
 });
