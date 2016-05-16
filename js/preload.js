@@ -1,7 +1,7 @@
 $(function() {
     // Prepare our loading screen
     $("body").prepend('<div id="preload"></div>');
-    $("#preload").html('<div class="preDiv"></div>').show();
+    $("#preload").html('<div class="preDiv"></div>').css("height", responsiveHeight()).show();
 
     // Add objects that will be animated
     $(".preDiv").html('<div class="prelogo">' + svg[8] + '</div>')
