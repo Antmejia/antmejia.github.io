@@ -3,7 +3,7 @@
 // Load variables
 
 var pT = "img/";
-var img = ["city-45.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "shineapp.jpg", "pj2.jpg", "pj3.jpg"];
+var img = ["city-45.jpg", "arrowdown.png", "profile.jpg", "favicon.jpg", "lumn-logo.jpg", "lbm-logo.jpg", "eshalsoft-logo.jpg", "eqo-logo.jpg"];
 var windHeight = $(window).height();
 var windWidth = $(window).width();
 var scrollOnceArrow = false;
@@ -135,6 +135,7 @@ $(window).resize(function() {
     windHeight = responsiveHeight();
     $("#bigJoe").height(windHeight + 10);
     $(".main-section").css("min-height", windHeight + $(".navbar-default").height());
+    $("#promodal").height(windHeight);
     if (windWidth < 800 && preFinish === true) {
         $(".buns").show();
     }
@@ -439,6 +440,13 @@ var showcase = {
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
         link: "#!",
         thumb: pT + img[4]
+    },
+    eqo: {
+        name: "eqo",
+        title: "eqo - Simple Calculator",
+        description: "LBM is a computer repair service company with a reputation for providing individualized attention to its clients, striving to be the most innovative technology company in the country.",
+        link: "http://golbm.com",
+        thumb: pT + img[7]
     },
     goLBM: {
         name: "goLBM",
