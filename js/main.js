@@ -438,14 +438,14 @@ var showcase = {
         name: "lumn",
         title: "lumn Weather App (Under Construction)",
         description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
-        link: "lumn.antmejia.com",
+        link: "http://lumn.antmejia.com",
         thumb: pT + img[4]
     },
     eqo: {
         name: "eqo",
         title: "eqo - Simple Calculator",
         description: "LBM is a computer repair service company with a reputation for providing individualized attention to its clients, striving to be the most innovative technology company in the country.",
-        link: "eqo.antmejia.com",
+        link: "http://eqo.antmejia.com",
         thumb: pT + img[7]
     },
     goLBM: {
