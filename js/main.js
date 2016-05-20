@@ -887,10 +887,6 @@ $(document).ready(function() {
         ga('send', 'event', 'button', 'click', buttonText);
     });
 
-    $("#bigJoe a").click(function() {
-        ga('send', 'event', 'bigJoe', 'click', "Arrow Down");
-    });
-
     $(".detail").click(function() {
         var typeDetail = $(this).attr("id");
         ga('send', 'event', 'contact', 'click', typeDetail);
