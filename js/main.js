@@ -437,14 +437,14 @@ var showcase = {
     lumn: {
         name: "lumn",
         title: "lumn Weather App (Under Construction)",
-        description: "This is a web app that elegantly shows the current forecast and allows you to look into the future.",
+        description: "This is an angular web app that elegantly shows the current forecast and the days ahead of you. This app is still under construction.",
         link: "http://lumn.antmejia.com",
         thumb: pT + img[4]
     },
     eqo: {
         name: "eqo",
         title: "eqo - Simple Calculator",
-        description: "LBM is a computer repair service company with a reputation for providing individualized attention to its clients, striving to be the most innovative technology company in the country.",
+        description: "This is a simple calculator which can perform all the basic functions. It has a clean, simple layout and looks good on any screen.",
         link: "http://eqo.antmejia.com",
         thumb: pT + img[7]
     },
