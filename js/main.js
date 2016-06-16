@@ -799,8 +799,8 @@ $(function() {
     var contact = [{
         type: "email",
         icon: svg[9],
-        text: "anthony.mejia1194@gmail.com",
-        link: "mailto:anthony.mejia1194@gmail.com"
+        text: "anthony@antmejia.com",
+        link: "mailto:anthony@antmejia.com"
     }, {
         type: "telephone",
         icon: svg[10],
