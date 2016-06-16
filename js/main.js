@@ -291,7 +291,7 @@ var barData = {
     labels: ['HTML5', 'CSS3', 'JavaScript', 'JQuery', 'Adobe CS6', 'AngularJS', 'Ruby'],
     datasets: [{
         label: 'Technical Skills',
-        data: [8, 6, 4, 5, 9, 2.25, 4.5],
+        data: [8, 6, 4, 5, 9, 3.25, 4.5],
         backgroundColor: "#34495e",
         borderWidth: 5,
         hoverBackgroundColor: "#4E6F8E"
