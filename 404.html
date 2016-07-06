@@ -9,9 +9,18 @@
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="404.css">
+    <script type="text/javascript" src="js/jquery-min.js"></script>
+    <script type="text/javascript" src="js/parallax-jq.js"></script>
+    <script type="text/javascript" src="js/404.js"></script>
 </head>
 <body>
-    <img src="img/404.jpg">
+	<div id="container" class="container">
+		<ul id="scene" class="scene">
+			<li class="layer" data-depth="0.20"><img src="img/stars.png"></li>
+			<li class="layer moon" data-depth="0.30"><img src="img/moon.png"></li>
+			<li class="layer" data-depth="0.00"><img src="img/astronaut.png"></li>
+		</ul>
+	</div>
     <div class="wrapper">
         <h1>Houston, we have a problem...</h1>
         <h3>Seems like you've landed at the wrong place!</h3>

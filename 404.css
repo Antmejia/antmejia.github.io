@@ -8,11 +8,6 @@ body {
     overflow: auto;
 }
 
-img {
-	top: 0;
-	width: 100%;
-}
-
 .wrapper {
     position: relative;
     width: 70%;
@@ -104,3 +99,27 @@ a {
 	    max-width: 580px;
 	}
 }
+
+.container {
+	top: 0;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #1E2832;
+}
+
+.scene {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.scene img {
+  display: block;
+  width: 100%;
+}
+
+.scene .moon {
+	width: 105%;
+}
+
