@@ -301,10 +301,8 @@ var barData = {
 // This function will determine if the canvas is on screen and if so, draw the chart and animate it. The scrollOnce function makes sure this fires only once
 $(window).scroll(function() {
 
-    if ($("#skillsChart h3").isOnScreenFull() === true && scrollOnceChart === false && preFinish === true) {
-        // alert("Canvas is inside viewpoint");
+    if (($("#skillsDonut").isOnScreen() === true || $("#skillsBar").isOnScreen() === true) && scrollOnceChart === false && preFinish === true) {
         scrollOnceChart = true;
-
         var dlay = 1200
         var skillsDonut = new Chart($("#skillsDonut").get(0).getContext("2d"), {
             type: 'doughnut',
