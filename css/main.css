@@ -930,7 +930,8 @@ h2.sectiontitle {
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    left: 0: display: inline;
+    left: 0;
+    display: inline;
 }
 
 #legend {
