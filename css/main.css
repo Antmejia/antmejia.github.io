@@ -666,6 +666,7 @@ h2.sectiontitle {
     }
 
     .bkdown h4 {
+        text-align: left;
         font-weight: bold;
     }
 
