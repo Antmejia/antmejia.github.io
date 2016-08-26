@@ -8,7 +8,7 @@ var windHeight = $(window).height();
 var windWidth = $(window).width();
 var scrollOnceArrow = false;
 var scrollOnceChart = false;
-var scrollOnceInfo = false
+var scrollOnceInfo = false;
 var preFinish = false;
 var inProgress = false;
 var autoScroll = false;
@@ -26,28 +26,28 @@ var social = {
         platform: "Google-Plus",
         color: "FF4D36",
         link: "https://plus.google.com/11099305054815726998",
-        icon: svg[0]
+        iconClass: 'li-google-plus'
     },
 
     linkedin: {
         platform: "LinkedIn",
         color: "0A76C8",
         link: "http://www.linkedin.com/in/antmejia",
-        icon: svg[1]
+        iconClass: 'li-linkedin'
     },
 
     twitter: {
         platform: "Twitter",
         color: "00A0FF",
         link: "http://www.twitter.com/_antmejia",
-        icon: svg[2]
+        iconClass: 'li-twitter'
     },
 
-    treehouse: {
-        platform: "Treehouse",
+    github: {
+        platform: "Github",
         color: "5FCF80",
-        link: "https://teamtreehouse.com/amejia",
-        icon: svg[3]
+        link: "https://github.com/antmejia",
+        iconClass: 'li-github'
     }
 };
 
@@ -78,7 +78,7 @@ function responsiveHeight() {
     } else {
         return $(window).height();
     }
-};
+}
 // Function to detect if an element is inside the viewport
 $.fn.isOnScreen = function() {
     var viewport = {};
@@ -183,7 +183,7 @@ $(function() {
         if (autoScroll === false) {
             $('.main-section').each(function() {
                 var id = $(this).attr("id");
-                var distance = $(this).offset().top - $(window).scrollTop();;
+                var distance = $(this).offset().top - $(window).scrollTop();
                 var navLink = $(".topbar a").filter("[href='#" + id + "']");
                 if (distance >= 25 && distance <= 85) {
                     tBar = navLink;
@@ -222,22 +222,41 @@ $(function() {
 
     for (var key in social) {
         var media = social[key];
-        $("#aboutface").append('<a href="' + media.link + '">' + media.icon + '</a>');
-        $("svg:not(.social-icon)").attr("alt", media.platform + " icon")
-            .attr("colordata", media.color)
-            .attr("class", "social-icon");
+        $("#aboutface").append('<a href="' + media.link + '" target="_blank">' + '<i class="social-icon ' + media.iconClass + '"></i></a>');
+    }
+    if (!Modernizr.backgroundcliptext) {
+        $("#aboutface .social-icon").addClass("noclip");
     }
 
-    $(".social-icon").hover(function() {
-        $(this).find(".icon-logo").velocity({
-            fill: "#" + $(this).attr("colordata"),
-            duration: 500
-        });
+    $(".social-icon").parent().hover(function() {
+        if (!$(this).children(".social-icon").hasClass("noclip")) {
+            $(this).append('<i class="' + $(this).children(".social-icon").attr("class") + ' gradient icopy"></i>');
+            $(this).find(".icopy").velocity({
+                opacity: 1,
+            }, {
+                duration: 300
+            });
+        } else {
+            $(this).children(".social-icon").velocity({
+                color: "#418ED5"
+            }, {
+                duration: 300
+            });
+        }
     }, function() {
-        $(this).find(".icon-logo").velocity({
-            fill: "#6A809B",
-            duration: 500
-        });
+        if ($(this).find(".icopy").length) {
+            $(this).find(".icopy").velocity({
+                opacity: 0,
+            }, {
+                duration: 500
+            });
+        } else {
+            $(this).children(".social-icon").velocity({
+                color: "#1C5A95"
+            }, {
+                duration: 500
+            });
+        }
     });
 
     $("#aboutsum").append('<h2 class="sectiontitle">About Me</h2>')
@@ -303,7 +322,7 @@ $(window).scroll(function() {
 
     if (($("#skillsDonut").isOnScreen() === true || $("#skillsBar").isOnScreen() === true) && scrollOnceChart === false && preFinish === true) {
         scrollOnceChart = true;
-        var dlay = 1200
+        var dlay = 1200;
         var skillsDonut = new Chart($("#skillsDonut").get(0).getContext("2d"), {
             type: 'doughnut',
             data: donutData,
@@ -531,7 +550,7 @@ $(function() {
         var name = $(this).children("img").attr("alt");
         showModal(showcase[name]);
     });
-    
+
     // Resume Section
     $("#resume").html('<h2 class="sectiontitle"> My Resume</h2>')
         .append('<div class="reportcard-button">View Report Card</div>')
@@ -611,7 +630,7 @@ $(function() {
         }
 
         $(".myResume").append('<a href="Antmejia.pdf" target="_blank"><div class="resume-button">Download Resume</div></a>');
-    };
+    }
 
     showResume();
 
@@ -889,9 +908,9 @@ $(document).ready(function() {
         var typeDetail = $(this).attr("id");
         ga('send', 'event', 'contact', 'click', typeDetail);
     });
-    
+
     $(".projects").click(function() {
         var proName = $(this).children("img").attr("alt");
         ga('send', 'event', 'project', 'click', proName);
-    });   
+    });
 });
