@@ -53,7 +53,6 @@ canvas {
     .main-window p {
         font-size: 20px !important;
     }
-
 }
 
 /***********FONTS***********/
@@ -61,19 +60,23 @@ canvas {
 .logoName,
 #skills h3,
 .preDiv h2,
-.navbar-nav, 
+.navbar-nav,
+#aboutface h3,
+#aboutface h4,
 .myResume h3 {
     font-family: "Raleway", sans-serif;
 }
 
-h2.sectiontitle,
-#aboutface h3,
-#aboutface h4,
 #bigJoe p,
-.section-title,
-.projects h4,
-.modal-title h4 {
+.section-title {
     font-family: "Josefin Sans", sans-serif;
+}
+
+h2.sectiontitle, 
+.projects h4,
+.modal-title h4,
+.bkdown h4 {
+	font-family: "Lato", sans-serif;
 }
 
 p,
@@ -194,7 +197,10 @@ p,
     }
 
 .navicon {
-    height: 40px;
+	width: 50px;
+    height: 60px;
+    position: fixed;
+    top: -2px;
 }
 
 .navicon .amlogo {
@@ -202,9 +208,8 @@ p,
 }
 
 .navicon svg {
-    height: 40px;
-    position: fixed;
-    top: -4px;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
@@ -486,8 +491,8 @@ svg.social-icon {
 /**********GENERAL SECTIONS**********/
 
 h2.sectiontitle {
-    font-weight: 600;
-    font-size: 40px;
+	font-weight: 300;
+    font-size: 47px;
     margin-bottom: 25px;
     padding-top: 10px;
 }
@@ -534,6 +539,28 @@ h2.sectiontitle {
     border: 0;
     height: 1px;
     background: #A4B0BE;
+}
+
+#aboutface .social-icon {
+	color: #1C5A95;
+	padding: 10px;
+	font-size: 35px;
+} 
+
+#aboutface .social-icon:hover {
+	color: #1C5A95;
+}
+
+#aboutface .icopy {
+	z-index: 2;
+	position: absolute;
+	margin-top: -10px;
+	margin-left: -55px;
+	opacity: 0;
+	background: linear-gradient(-45deg,  #81F3FD, #5BCAFF 5%, #196BD6);
+    background: -webkit-linear-gradient(-45deg,  #81F3FD, #5BCAFF 5%, #196BD6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 1200px) {
@@ -609,7 +636,9 @@ h2.sectiontitle {
 
 .bkdown h4 {
     font-size: 24px;
-    margin: 15px 5%;
+    font-weight: 400;
+    margin: 18px 8%;
+    width: 80%;
 }
 
 .bkdown p {
@@ -630,7 +659,7 @@ h2.sectiontitle {
 
     #skills p {
         display: block;
-        width: 70%;
+        width: 68%;
         overflow: hidden;
         right: 0;
         margin-top: 10px;
@@ -639,17 +668,20 @@ h2.sectiontitle {
     }
 
     .bkicon {
+        margin-top: 10px; 
         width: 15%;
         max-width: 100px;
         float: left;
         margin-left: 10%;
         display: inline;
-        position: relative;
+        position: absolute;
+        left: 0;
     }
 
     .ping {
         width: 150px;
         height: auto;
+        display: inline; 
     }
 
     #skillsum {
@@ -666,10 +698,16 @@ h2.sectiontitle {
     }
 
     .bkdown h4 {
-        text-align: left;
-        font-weight: bold;
+        display: block;
+        width: 68%;
+        text-align: left; 
+        overflow: hidden;
+        right: 0;
+        margin-top: 10px;
+        margin-left: 25%;
+        padding-right: 2%;
+        padding-left: 8%;
     }
-
 }
 
 /**********PROJECTS**********/
@@ -863,7 +901,7 @@ h2.sectiontitle {
 }
 
 .position h5 {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 20px;
 }
 
@@ -887,7 +925,7 @@ h2.sectiontitle {
 }
 
 .education h5 {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 20px;
 }
 
