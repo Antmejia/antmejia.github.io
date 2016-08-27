@@ -652,7 +652,12 @@ $(function() {
                     var badges = treehouse.badges;
                     var points = treehouse.points;
                     var total = points.total;
-
+                    function addComma(val){
+                        while (/(\d+)(\d{3})/.test(val.toString())){
+                            val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+                        }
+                       return val;
+                   }
                     var reportCard = {
                         labels: [
                             "HTML",
@@ -717,7 +722,7 @@ $(function() {
                                         $("#badges").append('<img src="' + badges[i].icon_url + '">');
                                     }
                                     $(".point-section").html('<canvas id="skillsResume" width="auto" height="auto"></canvas>')
-                                        .append('<h3 class="total">' + points.total + '</h3><p class="subtext">Total Points</p>')
+                                        .append('<h3 class="total">' + addComma(points.total) + '</h3><p class="subtext">Total Points</p>')
                                         .append('<div id="legend"></div>');
 
                                     $.each(points, function(key, value) {
@@ -727,7 +732,7 @@ $(function() {
                                                 var name = reportCard.labels[i];
                                                 if (name === key) {
                                                     reportCard.datasets[0].data.splice(i, 0, value);
-                                                    $("#legend").append('<div class="legend-item"><div style="background-color: ' + reportCard.datasets[0].backgroundColor[i] + ';" class="palette"></div><h6>' + key + '</h6><p>' + value + '</p></div>');
+                                                    $("#legend").append('<div class="legend-item"><div style="background-color: ' + reportCard.datasets[0].backgroundColor[i] + ';" class="palette"></div><h6>' + key + '</h6><p>' + addComma(value) + '</p></div>');
                                                 }
                                             }
                                         }
