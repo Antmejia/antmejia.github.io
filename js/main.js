@@ -25,7 +25,7 @@ var social = {
     gplus: {
         platform: "Google-Plus",
         color: "FF4D36",
-        link: "https://plus.google.com/11099305054815726998",
+        link: "https://plus.google.com/110993050548157269998",
         iconClass: 'li-google-plus'
     },
 
