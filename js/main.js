@@ -629,7 +629,7 @@ $(function() {
             $(".skills").append('<p> ' + skill + ' </p>');
         }
 
-        $(".myResume").append('<a href="Antmejia.pdf" target="_blank"><div class="resume-button">Download Resume</div></a>');
+        $(".myResume").append('<a href="antmejia.pdf" target="_blank"><div class="resume-button">Download Resume</div></a>');
     }
 
     showResume();
