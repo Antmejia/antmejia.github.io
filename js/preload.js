@@ -52,32 +52,26 @@ $(document).ready(function() {
             duration: 1200,
             delay: 100
         });
-
-    $("#preload").velocity({
-        height: 0,
-        opacity: 0.85
-    }, {
-        delay: preTime + 2300, // 6800, 
-        duration: 900,
-        easing: "ease-in-out"
+        
+    $(".preDiv").velocity(
+        "transition.expandOut", {
+            delay: preTime + 2200, // 9800
+            duration: 700
     });
 
-    $(".preDiv").velocity({
-        scale: 0.3,
-        opacity: 0.3,
-    }, {
-        delay: preTime + 2700, //6500,
-        duration: 600,
-        easing: "swing",
+    $("#preload").velocity("transition.fadeOut", {
+        delay: preTime + 2300, // 6800, 
+        duration: 1000,
+        easing: "ease-in-out",
         complete: function() {
             $("#preload").remove();
         }
     });
 
     $(".prelogo").velocity({
-        translateY: -(($("#preload svg").height())) + "px"
+      //  translateY: -($("#preload svg").height()) + "px"
     }, {
-        delay: preTime + 2560, //6500,
+        delay: preTime + 2760, //6500,
         duration: 600,
         easing: "easeInQuart"
     });
